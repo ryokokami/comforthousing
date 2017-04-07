@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HomePage</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  </head>
+
+  <body>
+  	<!--ヘッダー-->
+	<header>
+		<!--pcナビ-->
+		<div class="pc-menu">
+			<div class="pc-nav clearfix">
+				<div class="pc-nav-logo">
+					<h1><a href="index.html"><%= image_tag 'img_top/header_logo.gif'%></a></h1>
+				</div>
+				<ul class="pc-nav-list">
+					<li class="pc-nav-list-item"><%= link_to 'PRODUCT', '#' %>
+						<ul class="sub">
+							<li><%= link_to 'DOOR', '#' %></li>
+							<li><%= link_to 'HANDLE', '#' %></li>
+							<li><%= link_to 'STONE', '#' %></li>
+							<li><%= link_to 'KITCHEN', '#' %></li>
+							<li><%= link_to 'BATH ACCESSORY', '#' %></li>
+							<li><%= link_to 'STORAGE', '#' %></li>
+							<li><%= link_to 'FLOORING', '#' %></li>
+							<li><%= link_to 'CARPET', '#' %></li>
+							<li><%= link_to 'HARDWARE', '#' %></li>
+						</ul>
+					</li>
+					<li class="pc-nav-list-item"><%= link_to 'BRAND', '#' %>
+						<ul class="sub">
+							<li><%= link_to 'CAESARSTONE', '#' %></li>
+							<li><%= link_to 'LUALDI', '#' %></li>
+							<li><%= link_to 'COLOMBO Design', '#' %></li>
+							<li><%= link_to 'RAIKI', '#' %></li>
+							<li><%= link_to 'COMFORT ORIGINAL DOOR', '#' %></li>
+							<li><%= link_to '真　樹', '#' %></li>
+							<li><%= link_to 'GROB', '#' %></li>
+						</ul>
+					</li>
+					<li class="pc-nav-list-item"><%= link_to 'NEWS LETTER', '#' %>
+						<ul class="sub">
+							<li><%= link_to 'バックナンバー', '#' %></li>
+						</ul>
+					</li>
+					<li class="pc-nav-list-item"><%= link_to 'CATALOG', '#' %>
+						<ul class="sub">
+							<li><%= link_to 'ダウンロード', '#' %></li>
+						</ul>
+					</li>
+					<li class="pc-nav-list-item"><%= link_to 'SHOWROOM', '#' %>
+						<ul class="sub">
+							<li><%= link_to 'ご予約ページ', '#' %></li>
+						</ul>
+					</li>
+					<li class="pc-nav-list-item"><%= link_to 'ABOUT US', '#' %>
+						<ul class="sub">
+							<li><%= link_to '会社概要', '#' %></li>
+						</ul>
+					</li>
+					<li class="pc-nav-list-item"><%= link_to 'CONTACT US', '#' %>
+						<ul class="sub">
+							<li><%= link_to 'お問い合わせページ', '#' %></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- SP用ハンバーガーアイコン用 -->
+		<div class="sp-menu clearfix">
+			<div class="sp-nav">
+				<nav class="sp-icon">
+					<span class="line"></span>
+				</nav>
+				<div class="sp-nav-list">
+					<ul>
+						<li><%= link_to 'HOME', '#' %></li>
+						<li><%= link_to 'PRODUCT', '#' %></li>
+						<li><%= link_to 'BRAND', '#' %></li>
+						<li><%= link_to 'NEWS LETTER', '#' %></li>
+						<li><%= link_to 'CATALOG', '#' %></li>
+						<li><%= link_to 'SHOWROOM', '#' %></li>
+						<li><%= link_to 'ABOUT US', '#' %></li>
+						<li><%= link_to 'CONTACT US', '#' %></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+    <%= yield %>
+    <!--top pageへ戻るー-->
+	<p id="page-top"><a href="header">PAGE TOP</a></p>
+	<footer>
+    <footer>
+		<!--PC用フッター-->
+		<div class="pc-footer">
+			<div class="footer-logo">
+				<%= image_tag 'img_top/footer_logo.jpg'%>
+			</div>
+			<div class="clearfix footer-container">
+				<div class="footer-list">
+					<%= link_to 'PRODUCT', '#' %>
+					<ul>
+						<li><%= link_to 'DOOR', '#' %></li>
+						<li><%= link_to 'HANDLE', '#' %></li>
+						<li><%= link_to 'STONE', '#' %></li>
+						<li><%= link_to 'KITCHEN', '#' %></li>
+						<li><%= link_to 'BATH ACCESSORY', '#' %></li>
+						<li><%= link_to 'STORAGE', '#' %></li>
+						<li><%= link_to 'FLOORING', '#' %></li>
+						<li><%= link_to 'CARPET', '#' %></li>
+						<li><%= link_to 'HARDWARE', '#' %></li>
+					</ul>
+				</div>
+				<div class="footer-list">
+					<%= link_to 'BRAND', '#' %>
+					<ul>
+						<li><%= link_to 'CAESARSTONE', '#' %></li>
+						<li><%= link_to 'LUALDI', '#' %></li>
+						<li><%= link_to 'COLOMBO Design', '#' %></li>
+						<li><%= link_to 'RAIKI', '#' %></li>
+						<li><%= link_to 'COMFORT ORIGINAL DOOR', '#' %></li>
+						<li><%= link_to '真　樹', '#' %></li>
+						<li><%= link_to 'GROB', '#' %></li>
+					</ul>
+				</div>
+				<div class="footer-list">
+					<%= link_to 'SHOWROOM', '#' %>
+					<ul>
+						<li><%= link_to '東京ショールーム', '#' %></li>
+						<li><%= link_to '大阪ショールーム', '#' %></li>
+					</ul>
+					<%= link_to 'NEWS LETTER', '#' %>
+					<ul>
+						<li><%= link_to 'バックナンバー', '#' %></li>
+					</ul>
+				</div>
+				<div class="footer-list">
+					<%= link_to 'NEWS', '#' %>
+					<ul>
+						<li><%= link_to 'ニュース', '#' %></li>
+					</ul>
+					<%= link_to 'WORKS ', '#' %>
+					<ul>
+						<li><%= link_to 'DOOR', '#' %></li>
+						<li><%= link_to 'CAESARSTONE', '#' %></li>
+						<li><%= link_to 'STOREGE', '#' %></li>
+						<li><%= link_to 'FLOORING', '#' %></li>
+					</ul>
+				</div>
+				<div class="footer-list">
+					<ul><%= link_to 'CATALOG', '#' %></ul>
+						<ul>
+							<li><%= link_to 'ダウンロード', '#' %></li>
+						</ul>
+					<ul><%= link_to 'ABOUT US', '#' %></ul>
+						<ul>
+							<li><%= link_to '会社概要', '#' %></li>
+						</ul>
+					<ul><%= link_to 'CONTACT US', '#' %></ul>
+						<ul>
+							<li><%= link_to 'お問い合わせ', '#' %></li>
+						</ul>
+				</div>
+			</div>
+			<!--pc用フッター-->
+			<div class="pc-footer-bar clearfix">
+				<div class="container">
+					<div class="pc-copyright">Copyright&copy;2016 COMFORT Corporation. All Right Reserved.
+					</div>
+					<div class="pc-footer-fb">
+						<%= link_to image_tag('img_top/fb_logo.jpg') %></a>
+					</div>
+					<div class="pc-footer-fb">
+						<%= link_to image_tag('img_top/insta_logo.jpg') %></a>
+					</div>
+					<div class="pc-footer-logo">
+						<%= link_to image_tag('img_top/header_logo.gif') %></a>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<!--sp用フッター-->
+		<div class="sp-footer">
+			<%= link_to image_tag('img_top/header_logo.gif'), '#' %></a>
+		</div>
+	</footer>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+<!--パンくずナビ-->
+	<div class="container">
+		<ol class="topic-path">
+			<li><a href="#">HOME</a></li>
+			<li class="current">NEWS LETTER</li>
+		</ol>
+	</div>
+	<!--ブランドページ　コンテンツ-->
+	<main class="main container">
+		<section class="clearfix">
+			<h2 class="brand-title">NEWS LETTER</h2>
+			<div class="brand-content">
+				コンフォートは、国内外のメーカーとともに、デザイン、新製品の最新情報をC4　ニュースレターとしてお届けいたします。<br>
+				配信をご希望の方は、購読申し込みフォームからお申し込みください。<br><br><br>
+				※ニュースレターは不定期の発信となります。<br>
+				※法人の方は、会社名もご入力ください。
+			</div>
+			<div class="brand-content subscription">
+				<%= image_tag 'img_letter/c4logo.jpg', alt: "コンフォート株式会社" %>
+				<%= form_tag letters_mail_send_path, method: :post do %>
+				<table>
+					<tr>
+						<th>お名前</th>
+						<td><%= text_field_tag :name %></td>
+					</tr>
+					<tr>
+						<th>会社名</th>
+						<td><%= text_field_tag :company %></td>
+					</tr>
+					<tr>
+						<th>Email</th>
+						<td><%= text_field_tag :email %></td>
+					</tr>
+					<tr>
+						<td colspan="2"><%= submit_tag '申し込む', :class => "button" %></td>
+					</tr>
+				</table>
+				<% end %>
+			</div>
+		</section>
+		<!-- ｓｐ用 -->
+		<section class="brand-sub-content">
+			<div class="brand-flex-container">
+				<div class="brand-flex-item">
+					コンフォートは、国内外のメーカーとともに、デザイン、新製品の最新情報をC4　ニュースレターとしてお届けいたします。<br>
+					配信をご希望の方は、購読申し込みフォームからお申し込みください。<br>
+					※ニュースレターは不定期の発信となります。<br>
+					※法人の方は、会社名もご入力ください。
+				</div>
+				<div class="brand-flex-item subscription">
+				<%= image_tag 'img_letter/c4logo.jpg', alt: "コンフォート株式会社" %>
+				<%= form_tag letters_mail_send_path, method: :post do %>
+				<table>
+					<tr>
+						<th>お名前</th>
+						<td><%= text_field_tag :name %></td>
+					</tr>
+					<tr>
+						<th>会社名</th>
+						<td><%= text_field_tag :company %></td>
+					</tr>
+					<tr>
+						<th>Email</th>
+						<td><%= text_field_tag :email %></td>
+					</tr>
+					<tr>
+						<td colspan="2"><%= submit_tag '申し込む', :class => "button" %></td>
+					</tr>
+				</table>
+				<% end %>
+				</div>
+			</div>
+		</section>
+		<!-- バックナンバー -->
+		<section>
+			<h2 class="brand-title">BACK NUMBER</h2>
+			<div class="flex-container">
+				<div class="flex-item">
+					<%= link_to image_tag('img_letter/vol47.jpg', class:'flex-item-img'), "http://www.comforthousing.co.jp/c3m/vol47/vol47.html"  %>
+					<p>vol.47 最高級ホワイトオークを使用したフローリング　GROB　グローブ</p>
+				</div>
+				<div class="flex-item">
+					<%= link_to image_tag('img_letter/vol46.jpg', class:'flex-item-img', alt:'コンフォートニュースレター' ), "http://www.comforthousing.co.jp/c3m/vol46/vol46.html" %>
+					<p>vol.46 2017年新年明けましておめでとうございます。</p>
+				</div>
+				<div class="flex-item">
+					<%= link_to image_tag('img_letter/vol45.jpg', class:'flex-item-img', alt:'コンフォートニュースレター'), "http://www.comforthousing.co.jp/c3m/vol45/vol45.html" %>
+					<p>vol.45 Raikiシリーズ新製品のご紹介</p>
+				</div>
+				<div class="flex-item">
+					<%= link_to image_tag('img_letter/vol44.jpg', class:'flex-item-img', alt:'コンフォートニュースレター'), "http://www.comforthousing.co.jp/c3m/vol44/vol44.html" %>
+					<p>vol.44 Caesarstone in MILANO DESIGN WEEK 2016</p>
+				</div>
+				<div class="flex-item">
+					<%= link_to image_tag('img_letter/vol43.jpg', class:'flex-item-img', alt:'コンフォートニュースレター'), "http://www.comforthousing.co.jp/c3m/vol43/vol43.html" %>
+					<p>vvol.42 LUALDI コンフォートショールームに展示開始しました。</p>
+				</div>
+				<div class="flex-item">
+					<%= link_to image_tag('img_letter/vol42.jpg', class:'flex-item-img', alt:'コンフォートニュースレター'), "http://www.comforthousing.co.jp/c3m/vol42/vol42.html"%>
+					<p>vol.41 Milano Salone2016　出展のご案内</p>
+				</div>
+				
+			</div>
+		</section>
+		
+		<!--サブコンテンツ　ニュース-->
+		<section class="clearfix sub-content">
+			<h2 class="main-title">NEWS</h2>
+			<div class="main-content">
+				<%= link_to image_tag('img_top/top_news01.jpg'), "#", alt:"コンフォートニュース" %>
+				2016.10.04　KOHLERのショールームにシーザーストーンが採用されました。
+			</div>
+			<div class="main-content">
+				<%= link_to image_tag('img_top/top_news01.jpg'), "#", alt:"コンフォートニュース" %>
+				2016.10.04　KOHLERのショールームにシーザーストーンが採用されました。
+			</div>
+			<div class="main-content">
+				<%= link_to image_tag('img_top/top_news01.jpg'), "#", alt:"コンフォートニュース" %>
+				2016.10.04　KOHLERのショールームにシーザーストーンが採用されました。
+			</div>
+		</section>
+		<!--SP用　サブコンテンツ-->
+		<section class="sp-sub-content">
+				<div class="flex-container">
+				<div class="flex-item">
+					<h2>NEWS</h2>
+					<%= link_to image_tag('img_top/top_news01.jpg', alt:"コンフォートニュース", class:'flex-item-img'), "#" %>
+				</div>
+				<div class="flex-item">
+					<h2>SHOWROOM</h2>
+					<%= link_to image_tag('img_top/top_showroom_ch.jpg', alt:"ショールーム予約", class:'flex-item-img'), "#" %>
+				</div>
+				<div class="flex-item">
+					<h2>WORKS</h2>
+					<%= link_to image_tag('img_top/top_works01.jpg', alt:"施工事例" , class:'flex-item-img'), "#"%>
+				</div>
+			</div>
+		</section>
+	</main>

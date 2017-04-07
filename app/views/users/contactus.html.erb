@@ -1,0 +1,100 @@
+<!--パンくずナビ-->
+	<div class="container">
+		<ol class="topic-path">
+			<li><a href="#">HOME</a></li>
+			<li class="current">CONTACT US</li>
+		</ol>
+	</div>
+	<!--ブランドページ　コンテンツ-->
+	<main class="main container">
+		<div class="container2">
+			<section>
+				<h2 class="brand-title">CONTACT US</h2>
+				<div class="brand-description">
+					下記フォームに必要事項を入力の上、「入力内容の確認」ボタンをクリックして下さい。※印は必須項目です。必ずご入力ください。<br>
+					半角カタカナは文字化けの原因になりますのでご遠慮ください。<br>
+					お客様が弊社に個人情報をご提供していただくにあたり、弊社のプライバシーポリシーを必ずご確認ください。
+				</div>
+			</section>
+			<%= form_tag users_mail_send_path, method: :post do %>
+			<table>
+				<tr>
+					<th>お名前　※</th>
+					<td><%= text_field_tag :name, '', :placeholder => "（例）佐藤太郎" %></td>
+				</tr>
+				<tr>
+					<th>会社名</th>
+					<td><%= text_field_tag :company, '', :placeholder => "（例）コンフォート株式会社" %></td>
+				</tr>
+				<tr>
+					<th>E-mail　※</th>
+					<td><%= text_field_tag :email, '', :placeholder => "（例）office@comforthousing.co.jp" %></td>
+				</tr>
+				<tr>
+					<th>Tel　</th>
+					<td><%= text_field_tag :tel, '', :placeholder => "（例）03-5798-3900" %></td>
+				</tr>
+				<tr>
+					<th>お問い合わせ内容 ※</th>
+					<td><%= text_area_tag :message, '', :placeholder => "お問い合わせ内容を記入ください", :class => "textarea" %></td>
+				</tr>
+				<tr>
+					<th class="border-bottom">弊社からのお知らせ ※</th>
+					<td class="border-bottom">
+						<%= radio_button_tag :require, '', :id =>"select1", :class => "sample_radio", :checked => true %>
+						<label for="select1" class="sample_label">希望する</label>
+						<%= radio_button :require, '', :id =>"select2", :class => "sample_radio", :checked => false %>
+						<label for="select2" class="sample_label">希望しない</label>
+					</td>
+				</tr>
+			</table>
+		
+			</section>
+			<section>
+				<div class="brand-description2">
+					<a href="#">プライバシーポリシー</a>をお読みください。
+				</div>
+				<div class="brand-description2">
+					<%= submit_tag '送信'%>
+				</div>
+			</section>
+			<% end %>
+		</div>
+		
+		<!--サブコンテンツ　ニュース-->
+		<section class="clearfix sub-content">
+			<h2 class="main-title">NEWS</h2>
+			<div class="main-content">
+				<%= link_to image_tag('img_top/top_news01.jpg'), "#", alt:"コンフォートニュース" %>
+				2016.10.04　KOHLERのショールームにシーザーストーンが採用されました。
+			</div>
+			<div class="main-content">
+				<%= link_to image_tag('img_top/top_news01.jpg'), "#", alt:"コンフォートニュース" %>
+				2016.10.04　KOHLERのショールームにシーザーストーンが採用されました。
+			</div>
+			<div class="main-content">
+				<%= link_to image_tag('img_top/top_news01.jpg'), "#", alt:"コンフォートニュース" %>
+				2016.10.04　KOHLERのショールームにシーザーストーンが採用されました。
+			</div>
+		</section>
+		<!--SP用　サブコンテンツ-->
+		<section class="sp-sub-content">
+				<div class="flex-container">
+				<div class="flex-item">
+					<h2>NEWS</h2>
+					<a href="#"><img src="../img/top_news01.jpg"  class="flex-item-img"
+					alt="コンフォートニュース"></a>
+				</div>
+				<div class="flex-item">
+					<h2>SHOWROOM</h2>
+					<a href="#"><img src="../img/top_showroom_ch.jpg"  class="flex-item-img"
+					alt="ショールームご予約"></a>
+				</div>
+				<div class="flex-item">
+					<h2>WORKS</h2>
+					<a href="#"><img src="../img/top_works01.jpg"  class="flex-item-img"
+					alt="施工事例"></a>
+				</div>
+			</div>
+		</section>
+	</main>
